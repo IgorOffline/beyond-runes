@@ -1,5 +1,5 @@
 <script lang="ts">
-	let { answer } = $props();
+	let { answer = -1 } = $props();
 </script>
 
 <p>The answer is {answer}</p>
