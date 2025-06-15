@@ -40,3 +40,10 @@
 <FirstCounter />
 <FirstCounter />
 <SpreadProps {...spread} />
+{#if count < 100}
+	<p>(1)</p>
+{:else if count > 102}
+	<p>(3)</p>
+{:else}
+	<p>(2)</p>
+{/if}
