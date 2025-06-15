@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Nested from '$lib/Nested.svelte';
 	import FirstCounter from '$lib/FirstCounter.svelte';
+	import SpreadProps from '$lib/SpreadProps.svelte';
 	let name = 'Svelte';
 	let count = $state(99);
 	function increment() {
@@ -16,6 +17,12 @@
 	$inspect(numbers).with((inspected) =>
 		console.log(`inspected= ${inspected}, numbers= ${numbers}`)
 	);
+	const spread = {
+		name: 'name1',
+		version: 'version1',
+		description: 'description1',
+		website: 'website1'
+	};
 </script>
 
 <h1>Hello {name.toUpperCase()}!</h1>
@@ -32,3 +39,4 @@
 <FirstCounter />
 <FirstCounter />
 <FirstCounter />
+<SpreadProps {...spread} />
