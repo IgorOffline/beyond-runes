@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Nested from '$lib/Nested.svelte';
-  let name = 'Svelte';
-	let count = $state(99)
+	let name = 'Svelte';
+	let count = $state(99);
 	function increment() {
 		count += 1;
 	}
@@ -14,10 +14,10 @@
 </script>
 
 <h1>Hello {name.toUpperCase()}!</h1>
-<button onclick="{increment}">
+<button onclick={increment}>
 	Clicked {count}
 </button>
-<button onclick="{addNumber}">
+<button onclick={addNumber}>
 	Clicked {numbers}
 </button>
 <p>{numbers.join(' + ')} = {total}</p>
