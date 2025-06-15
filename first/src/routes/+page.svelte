@@ -23,7 +23,20 @@
 		description: 'description1',
 		website: 'website1'
 	};
-	const myEach = [0, 0, 0];
+	const myEach = [
+		{
+			id: 1,
+			value: 0
+		},
+		{
+			id: 2,
+			value: 0
+		},
+		{
+			id: 3,
+			value: 0
+		}
+	];
 </script>
 
 <h1>Hello {name.toUpperCase()}!</h1>
@@ -48,6 +61,6 @@
 {:else}
 	<p>(2)</p>
 {/if}
-{#each myEach as me, i}
-	({i}) {me}<br />
+{#each myEach as me, i (me.id)}
+	({i}) {me.id} {me.value}<br />
 {/each}
