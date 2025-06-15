@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Nested from '$lib/Nested.svelte';
+	import FirstCounter from '$lib/FirstCounter.svelte';
 	let name = 'Svelte';
 	let count = $state(99);
 	function increment() {
@@ -9,8 +10,12 @@
 	function addNumber() {
 		//numbers[numbers.length] = numbers.length + 1;
 		numbers.push(numbers.length + 1);
+		//console.log($state.snapshot(numbers));
 	}
 	let total = $derived(numbers.reduce((t, n) => t + n, 0));
+	$inspect(numbers).with((inspected) =>
+		console.log(`inspected= ${inspected}, numbers= ${numbers}`)
+	);
 </script>
 
 <h1>Hello {name.toUpperCase()}!</h1>
@@ -24,3 +29,6 @@
 <Nested />
 <Nested />
 <Nested />
+<FirstCounter />
+<FirstCounter />
+<FirstCounter />
