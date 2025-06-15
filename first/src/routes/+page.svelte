@@ -26,9 +26,9 @@
 	Clicked {numbers}
 </button>
 <p>{numbers.join(' + ')} = {total}</p>
-<Nested />
-<Nested />
-<Nested />
+<Nested answer={2} />
+<Nested answer={4} />
+<Nested answer={6} />
 <FirstCounter />
 <FirstCounter />
 <FirstCounter />
